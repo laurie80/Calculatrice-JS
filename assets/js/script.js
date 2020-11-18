@@ -16,6 +16,8 @@ let decimalPoint = document.getElementById("decimalPoint");
 let division = document.getElementById("division");
 let total = document.getElementById("egal");
 
+// POUR ESSAYER D ENLEVER UNE ERREUR DE FRAPPE
+// let clean = document.getElementById("clean");
 
 let numberOne = document.getElementById("firstResult");
 let operator = document.getElementById("operator");
@@ -110,3 +112,7 @@ total.onclick = function () {
         finalResult.value = parseInt(numberOne.value) / parseInt(numberTwo.value);
     }
 }
+
+// clean.onclick = function () {
+//     resultat.value - clean.value;
+// }
