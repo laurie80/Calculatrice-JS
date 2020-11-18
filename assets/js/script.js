@@ -20,6 +20,7 @@ let total = document.getElementById("egal");
 let numberOne = document.getElementById("firstResult");
 let operator = document.getElementById("operator");
 let numberTwo = document.getElementById("secondResult");
+let finalResult = document.getElementById("finalResult");
 
 let resultat = numberOne;
 
@@ -85,6 +86,10 @@ division.onclick = function () {
 
 cancel.onclick = function () {
     resultat.value = cancel.value;
+    operator.innerText = cancel.value;
+    document.getElementById("firstResult").value = cancel.value;
+    finalResult.value = cancel.value;
+    resultat = numberOne;
 }
 
 decimalPoint.onclick = function () {
@@ -92,7 +97,16 @@ decimalPoint.onclick = function () {
 }
 
 total.onclick = function () {
-
+    if (operator.innerText == add.value) {
+        finalResult.value = parseInt(numberOne.value) + parseInt(numberTwo.value);
+    }
+    if (operator.innerText == multiplication.value) {
+        finalResult.value = parseInt(numberOne.value) * parseInt(numberTwo.value);
+    }
+    if (operator.innerText == substraction.value) {
+        finalResult.value = parseInt(numberOne.value) - parseInt(numberTwo.value);
+    }
+    if (operator.innerText == division.value) {
+        finalResult.value = parseInt(numberOne.value) / parseInt(numberTwo.value);
+    }
 }
-
-
